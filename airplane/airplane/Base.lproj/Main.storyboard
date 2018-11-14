@@ -19,13 +19,27 @@
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="road10.png" highlightedImage="road1.png" id="wuE-Mv-2C3">
                                 <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
-                                <autoresizingMask key="autoresizingMask"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" id="wyM-c0-faF">
+                                <rect key="frame" x="0.0" y="187" width="667" height="104"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="cloud.png" id="2K2-eA-PWg">
+                                <rect key="frame" x="26" y="0.0" width="393" height="201"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="tree1.png" id="PNU-yi-mbc">
+                                <rect key="frame" x="0.0" y="0.0" width="667" height="291"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <connections>
+                        <outlet property="cloudimage" destination="2K2-eA-PWg" id="2eY-dw-YLV"/>
                         <outlet property="roadimage" destination="wuE-Mv-2C3" id="72h-19-LUB"/>
+                        <outlet property="treeimage" destination="PNU-yi-mbc" id="EDd-QL-iN5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -34,7 +48,9 @@
         </scene>
     </scenes>
     <resources>
+        <image name="cloud.png" width="600" height="278"/>
         <image name="road1.png" width="1024" height="600"/>
         <image name="road10.png" width="1024" height="600"/>
+        <image name="tree1.png" width="1024" height="600"/>
     </resources>
 </document>

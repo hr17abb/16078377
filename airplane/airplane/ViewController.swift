@@ -12,6 +12,11 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var roadimage: UIImageView!
     
+    @IBOutlet weak var treeimage: UIImageView!
+    
+    @IBOutlet weak var cloudimage: UIImageView!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -43,8 +48,41 @@ class ViewController: UIViewController {
     
     roadimage.frame = UIScreen.main.bounds
     
-    self.view.sendSubview(toBack:roadimage)
-    
+    //self.view.sendSubview(toBack:roadimage)
+        
+        var treeArray : [UIImage]!
+        
+        treeArray = [UIImage(named: "tree1.png")!,
+                      UIImage(named: "tree2.png")!,
+                      UIImage(named: "tree3.png")!,
+                      UIImage(named: "tree4.png")!,
+                      UIImage(named: "tree5.png")!,
+                      UIImage(named: "tree6.png")!,
+                      UIImage(named: "tree7.png")!,
+                      UIImage(named: "tree8.png")!,
+                      UIImage(named: "tree9.png")!,
+                      UIImage(named: "tree10.png")!,
+                      UIImage(named: "tree11.png")!,
+                      UIImage(named: "tree12.png")!,
+                      UIImage(named: "road13.png")!,
+                      UIImage(named: "road14.png")!,
+                      UIImage(named: "tree15.png")!,
+                      UIImage(named: "tree16.png")!,
+                      UIImage(named: "tree17.png")!,]
+        
+        treeimage.image = UIImage.animatedImage(with: treeArray, duration: 3)
+        
+        
+        
+        
+        var cloudArray : [UIImage]!
+        
+        cloudArray = [UIImage(named: "cloud.png")!,
+                     UIImage(named: "cloud2.png")!,]
+        
+        cloudimage.image = UIImage.animatedImage(with: cloudArray, duration: 10)
+        
+        
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
