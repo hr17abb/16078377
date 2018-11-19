@@ -8,7 +8,26 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+protocol subviewDelegate {
+    func changeSomething()
+}
+
+class ViewController: UIViewController, subviewDelegate {
+    
+    func changeSomething() {
+        collisionBehavior.removeAllBoundaries()
+        collisionBehavior.addBoundary(withIdentifier: "barrier" as NSCopying, for: UIBezierPath(rect: plane.frame))
+    }
+    
+    var dynamicAnimator: UIDynamicAnimator!
+    var dynamicBehavior : UIDynamicItemBehavior!
+    var collisionBehavior : UICollisionBehavior!
+    var gravityBehavior : UIGravityBehavior!
+    
+    
+    
+    @IBOutlet weak var plane: DraggedImageView!
+    
     
     @IBOutlet weak var roadimage: UIImageView!
     

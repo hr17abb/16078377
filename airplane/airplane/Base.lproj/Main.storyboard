@@ -17,38 +17,45 @@
                         <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="road10.png" highlightedImage="road1.png" id="wuE-Mv-2C3">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="road10.png" highlightedImage="road1.png" id="wuE-Mv-2C3">
                                 <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" id="wyM-c0-faF">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="wyM-c0-faF">
                                 <rect key="frame" x="0.0" y="187" width="667" height="104"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="cloud.png" id="2K2-eA-PWg">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cloud.png" id="2K2-eA-PWg">
                                 <rect key="frame" x="26" y="0.0" width="393" height="201"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="tree1.png" id="PNU-yi-mbc">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tree1.png" id="PNU-yi-mbc">
                                 <rect key="frame" x="0.0" y="0.0" width="667" height="291"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView tag="1" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="plane1.png" highlightedImage="plane10.png" id="yNz-cM-flJ" customClass="DraggedImageView" customModule="airplane" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="130" width="166" height="71"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <connections>
                         <outlet property="cloudimage" destination="2K2-eA-PWg" id="2eY-dw-YLV"/>
+                        <outlet property="plane" destination="yNz-cM-flJ" id="peg-AD-Ks8"/>
                         <outlet property="roadimage" destination="wuE-Mv-2C3" id="72h-19-LUB"/>
                         <outlet property="treeimage" destination="PNU-yi-mbc" id="EDd-QL-iN5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="27.5" y="8.5"/>
+            <point key="canvasLocation" x="27.500000000000004" y="8.5"/>
         </scene>
     </scenes>
     <resources>
         <image name="cloud.png" width="600" height="278"/>
+        <image name="plane1.png" width="126" height="74"/>
+        <image name="plane10.png" width="126" height="74"/>
         <image name="road1.png" width="1024" height="600"/>
         <image name="road10.png" width="1024" height="600"/>
         <image name="tree1.png" width="1024" height="600"/>
