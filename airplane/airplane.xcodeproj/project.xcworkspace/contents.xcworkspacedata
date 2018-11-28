@@ -2,48 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:../plane1.png">
-   </FileRef>
-   <FileRef
-      location = "group:../plane2.png">
-   </FileRef>
-   <FileRef
-      location = "group:../plane3.png">
-   </FileRef>
-   <FileRef
-      location = "group:../plane4.png">
-   </FileRef>
-   <FileRef
-      location = "group:../plane5.png">
-   </FileRef>
-   <FileRef
-      location = "group:../plane6.png">
-   </FileRef>
-   <FileRef
-      location = "group:../plane7.png">
-   </FileRef>
-   <FileRef
-      location = "group:../plane8.png">
-   </FileRef>
-   <FileRef
-      location = "group:../plane9.png">
-   </FileRef>
-   <FileRef
-      location = "group:../plane10.png">
-   </FileRef>
-   <FileRef
-      location = "group:../plane11.png">
-   </FileRef>
-   <FileRef
-      location = "group:../plane12.png">
-   </FileRef>
-   <FileRef
-      location = "group:../plane13.png">
-   </FileRef>
-   <FileRef
-      location = "group:../plane14.png">
-   </FileRef>
-   <FileRef
       location = "self:">
    </FileRef>
 </Workspace>
