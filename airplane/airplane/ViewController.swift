@@ -30,7 +30,7 @@ class ViewController: UIViewController, subviewDelegate {
     var allbirds: [UIImageView] = []
     
     //var starts = 20
-   // var startsTimer = Timer()
+    //var startsTimer = 0
     var points = 0
     var starts = 0;
     var Timer = 20;
@@ -48,8 +48,9 @@ class ViewController: UIViewController, subviewDelegate {
     @IBOutlet weak var GameTimer: UIButton!
     
     
+
+
     @IBOutlet weak var plane: DraggedImageView!
-    
     @IBOutlet weak var bird1: UIImageView!
     @IBOutlet weak var bird2: UIImageView!
     @IBOutlet weak var bird3: UIImageView!
@@ -61,6 +62,7 @@ class ViewController: UIViewController, subviewDelegate {
     @IBOutlet weak var bird9: UIImageView!
     @IBOutlet weak var bird10: UIImageView!
     
+    @IBOutlet weak var coin: UIImageView!
     
     @IBOutlet weak var roadimage: UIImageView!
     
@@ -74,7 +76,7 @@ class ViewController: UIViewController, subviewDelegate {
     
     
     
-   /* let birdsArray = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20]
+    /*let birdsArray = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20]
     
     @objc func startGameTimer() {
         starts = starts - 1
@@ -231,7 +233,7 @@ class ViewController: UIViewController, subviewDelegate {
         
         bird1.frame = CGRect(x: -250, y:Int(randomx), width:100, height: 100)
         bird2.frame = CGRect(x: -300, y:Int(randomx1), width:100, height: 100)
-        bird3.frame = CGRect(x: -450, y:Int(randomx2), width:100, height: 100)
+        bird3.frame = CGRect(x: -350, y:Int(randomx2), width:100, height: 100)
         bird4.frame = CGRect(x: -700, y:Int(randomx3), width:100, height: 100)
         bird5.frame = CGRect(x: -1000, y:Int(randomx4), width:100, height: 100)
         bird6.frame = CGRect(x: -1030, y:Int(randomx5), width:100, height: 100)
@@ -240,15 +242,27 @@ class ViewController: UIViewController, subviewDelegate {
         bird9.frame = CGRect(x: -1800, y:Int(randomx8), width:100, height: 100)
         bird10.frame = CGRect(x: -2400, y: Int(randomx9), width:100, height: 100)
         
+        coin.frame = CGRect(x: -250, y: Int(random3), width: 75, height: 75)
+        
+        plane.myDelegate = self
+        
         dynamicAnimator = UIDynamicAnimator(referenceView: self.view)
         
         
-        collisionBehavior = UICollisionBehavior(items: [bird1,bird2,bird3,bird4,bird5,bird6,bird7,bird8,bird9,bird10])
+        collisionBehavior = UICollisionBehavior (items: [bird1,bird2,bird3,bird4,bird5,bird6,bird7,bird8,bird9,bird10,coin])
         
         collisionBehavior.translatesReferenceBoundsIntoBoundary = false
         dynamicAnimator.addBehavior(collisionBehavior)
-        dynamicBehavior = UIDynamicItemBehavior(items: [bird1,bird2,bird3,bird4,bird5,bird6,bird7,bird8,bird9,bird10])
+        dynamicBehavior = UIDynamicItemBehavior(items: [bird1,bird2,bird3,bird4,bird5,bird6,bird7,bird8,bird9,bird10,coin])
         
+       /* bird1.removeFromSuperview()
+        bird2.removeFromSuperview()
+        bird3.removeFromSuperview()
+        bird4.removeFromSuperview()
+        bird5.removeFromSuperview()
+        bird6.removeFromSuperview()
+        */
+        //dynamicBehavior.elasticity = 0.8;
         
         self.dynamicBehavior.addLinearVelocity(CGPoint(x: Int(random), y: 0), for: bird1)
         self.dynamicBehavior.addLinearVelocity(CGPoint(x: Int(random1), y: 0), for: bird2)
@@ -261,6 +275,9 @@ class ViewController: UIViewController, subviewDelegate {
         self.dynamicBehavior.addLinearVelocity(CGPoint(x: Int(random8), y: 0), for: bird8)
         self.dynamicBehavior.addLinearVelocity(CGPoint(x: Int(random9), y: 0), for: bird9)
         
+        self.dynamicBehavior.addLinearVelocity(CGPoint(x: Int(random3), y: 0), for: coin)
+        
+        //coin.removeFromSuperview()
         dynamicAnimator.addBehavior(dynamicBehavior)
     //self.view.sendSubview(toBack:roadimage)
         
@@ -319,6 +336,9 @@ class ViewController: UIViewController, subviewDelegate {
         bird9.image = UIImage.animatedImage(with: birdArray, duration: 0.6)
         bird10.image = UIImage.animatedImage(with: birdArray, duration: 0.6)
 
+    
+        
+        
         
         
         var planeArray : [UIImage]!
